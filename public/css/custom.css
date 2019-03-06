@@ -1,0 +1,185 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* Font Family Reference*/
+/*
+font-family: 'Roboto Mono', monospace;
+font-family: 'PT Sans', sans-serif;
+font-family: 'Dancing Script', cursive;
+*/
+
+/* Global Site */
+body {
+    font-family: 'PT Sans', sans-serif;
+    color: #353b48;
+}
+
+.fixed-frame-deco {
+    
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: 20px solid #dcdde1;
+}
+
+.content-container {
+  width: 100%;
+  padding: 0 2rem;
+  margin-top: 7rem;
+}
+
+/* ---------- Navbar ---------- */
+.navbar {
+    font-family: 'Roboto Mono', monospace;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.15);
+  z-index: 8;
+}
+
+/* Mobile */
+.navbar-mobile {
+  position: fixed;
+  top: 4rem;
+  left: 4rem;
+  z-index: 1000;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Navbar Toggle */
+.navbar-toggle {
+  position: absolute;
+  top: -1rem;
+  left: -1rem;
+  width: 1.5rem;
+}
+
+.navbar-toggle svg {
+  fill: rgb(34, 47, 62);
+}
+
+.navbar-toggle.clicked svg .menu-bar-1 {
+  width: 0;
+}
+
+.navbar-toggle svg .menu-bar-1 {
+  transition: width 600ms;
+}
+
+/* Navbar Close */
+.navbar-close {
+  position: absolute;
+  top: -1.5rem;
+  left: -1.5rem;
+  width: 2.5rem;
+  z-index: 10;
+  transform: scale(0);
+  animation: bounceOut 300ms ease-in-out 100ms;
+  animation-fill-mode: forwards;
+}
+
+/* Navbar Content */
+.navbar-items {
+  position: relative;
+  background: #fff;
+  margin: 1rem;
+  padding: 1rem;
+  padding-top: 0.5rem;
+  box-shadow: 0px 24px 16px -15px rgba(0, 0, 0, 0.1), 0px 2px 26px rgba(0, 0, 0, 0.16);
+  transform-origin: top left;
+  transform: scale(0);
+  animation: bounceOut 500ms ease-in-out 100ms;
+  animation-fill-mode: forwards;
+  z-index: 10;
+}
+
+
+
+@keyframes bounceOut {
+  0% {
+    transform: scale(0);
+  }
+
+  75% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.navbar-mobile li {
+  margin: 0.8rem 0;
+}
+
+.navbar-mobile span {
+  padding: 0 0.5rem;
+  color: #353b48;
+  background-color: rgba(194, 54, 22,0.4);
+}
+
+/* ---------- Navbar End ---------- */
+
+/* ---------- Page Header ---------- */
+.page-cursive-main-title {
+  font-family: 'Rock Salt', cursive;
+  font-size: 2rem; 
+  color: #2c3e50;
+}
+
+/* Underline From Left */
+.hvr-underline-from-left {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+}
+
+.hvr-underline-from-left:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 100%;
+  bottom: 0;
+  background: #e84118;
+  height: 2px;
+  -webkit-transition-property: right;
+  transition-property: right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-underline-from-left:hover:before, .hvr-underline-from-left:focus:before, .hvr-underline-from-left:active:before {
+  right: 0;
+}
+
+
+/* Global site end */
+
+
+
